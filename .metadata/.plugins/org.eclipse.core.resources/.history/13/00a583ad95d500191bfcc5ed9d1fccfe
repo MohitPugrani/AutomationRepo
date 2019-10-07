@@ -1,0 +1,15 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RPAChallenge {
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver", "E:\\Users\\mohi123\\Downloads\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.navigate().to("https://rpachallenge.com");
+		driver.manage().window().maximize();
+
+	}
+
+}

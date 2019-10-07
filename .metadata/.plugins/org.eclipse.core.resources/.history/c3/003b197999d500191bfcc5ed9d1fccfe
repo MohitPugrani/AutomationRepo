@@ -1,0 +1,32 @@
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class RPAChallenge {
+
+	public Object[][] excelArray;
+	
+	public static void main(String[] args) throws InterruptedException {
+
+		System.setProperty("webdriver.chrome.driver", "E:\\Users\\mohi123\\Downloads\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.navigate().to("https://rpachallenge.com");
+		driver.manage().window().maximize();
+		Thread.sleep(3000);
+		driver.quit();
+
+		RPAChallenge obj1=new RPAChallenge();
+		obj1.ReadFromExcel("E:\\Users\\mohi123\\Desktop\\challenge.xlsx");
+	}
+
+	public void ReadFromExcel(String filePath) throws FileNotFoundException
+	{
+		File file=new File(filePath);
+		FileInputStream fis=new FileInputStream(file);
+		
+		
+	}
+}
